@@ -7,6 +7,7 @@ public class Usuarios {
     private Rol rol; 
     private String creado;
     private String actualizado;
+    
 
     public Usuarios() {
     }

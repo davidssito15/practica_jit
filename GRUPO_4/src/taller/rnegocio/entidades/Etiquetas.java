@@ -5,6 +5,7 @@ public class Etiquetas {
   private String nombre; 
   private String creado ;
   private String actualizado;
+  
 
     public Etiquetas() {
     }
