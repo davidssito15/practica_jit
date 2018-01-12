@@ -9,6 +9,13 @@ package grupo_4.dao;
  *
  * @author Davidssito Campos
  */
+    import grupo_4.entidades.*;
+    import java.util.*;
 public interface IRoles {
+    public int insertar (Roles roles) throws Exception;
+    public int modificar (Roles roles) throws Exception; 
+    public int eliminar (Roles roles) throws Exception;
+    public Roles obtener (String codigo) throws Exception;
+    public ArrayList<Roles> obtener() throws Exception;
     
 }
