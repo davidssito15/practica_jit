@@ -1,31 +1,27 @@
-
-package taller.rnegocio.entidades;
-
+package grupo_4.entidades;
 import java.sql.Date;
+public class Etiquetas {
+    private int idetiquetas;
+    private String nombre; 
+    private Date creado ;
+    private Date actualizado ;
 
-public class Roles {
-    private int idroles;
-    private String nombre;
-    private Date creado; 
-    private Date actualizado;
-
-    
-    public Roles() {
+    public Etiquetas() {
     }
 
-    public Roles(int idroles, String nombre, Date creado, Date actualizado) {
-        this.idroles = idroles;
+    public Etiquetas(int idetiquetas, String nombre, Date creado, Date actualizado) {
+        this.idetiquetas = idetiquetas;
         this.nombre = nombre;
         this.creado = creado;
         this.actualizado = actualizado;
     }
 
-    public int getIdroles() {
-        return idroles;
+    public int getIdetiquetas() {
+        return idetiquetas;
     }
 
-    public void setIdroles(int idroles) {
-        this.idroles = idroles;
+    public void setIdetiquetas(int idetiquetas) {
+        this.idetiquetas = idetiquetas;
     }
 
     public String getNombre() {
@@ -51,4 +47,6 @@ public class Roles {
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
+ 
+ 
 }

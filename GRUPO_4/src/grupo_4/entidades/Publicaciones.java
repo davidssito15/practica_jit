@@ -1,4 +1,4 @@
-package taller.rnegocio.entidades;
+package grupo_4.entidades;
 import java.sql.Date;
 public class Publicaciones {
     private int idpublicaciones;

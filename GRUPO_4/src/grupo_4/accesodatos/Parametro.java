@@ -1,5 +1,5 @@
 
-package taller.accesodatos;
+package grupo_4.accesodatos;
 
 
 public class Parametro {

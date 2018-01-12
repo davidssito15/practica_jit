@@ -1,4 +1,4 @@
-package taller.accesodatos;
+package grupo_4.accesodatos;
 
 import java.sql.*;
 import java.util.List;
