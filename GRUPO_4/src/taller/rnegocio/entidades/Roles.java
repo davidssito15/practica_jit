@@ -1,17 +1,19 @@
 
 package taller.rnegocio.entidades;
 
-public class Rol {
+import java.sql.Date;
+
+public class Roles {
     private int idroles;
     private String nombre;
-    private String creado; 
-    private String actualizado;
+    private Date creado; 
+    private Date actualizado;
 
     
-    public Rol() {
+    public Roles() {
     }
 
-    public Rol(int idroles, String nombre, String creado, String actualizado) {
+    public Roles(int idroles, String nombre, Date creado, Date actualizado) {
         this.idroles = idroles;
         this.nombre = nombre;
         this.creado = creado;
@@ -34,20 +36,19 @@ public class Rol {
         this.nombre = nombre;
     }
 
-    public String getCreado() {
+    public Date getCreado() {
         return creado;
     }
 
-    public void setCreado(String creado) {
+    public void setCreado(Date creado) {
         this.creado = creado;
     }
 
-    public String getActualizado() {
+    public Date getActualizado() {
         return actualizado;
     }
 
-    public void setActualizado(String actualizado) {
+    public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
-       
 }

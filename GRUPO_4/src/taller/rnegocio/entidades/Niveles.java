@@ -1,28 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package taller.rnegocio.entidades;
-
 import java.sql.Date;
 
-/**
- *
- * @author Segovia
- */
 public class Niveles {
+    private int idniveles;
     private String nombre;
-    private Date crear;
-    private Date actulizar;
+    private Date creado;
+    private Date actulizado;
 
     public Niveles() {
     }
 
-    public Niveles(String nombre, Date crear, Date actulizar) {
+    public Niveles(int idniveles, String nombre, Date creado, Date actulizado) {
+        this.idniveles = idniveles;
         this.nombre = nombre;
-        this.crear = crear;
-        this.actulizar = actulizar;
+        this.creado = creado;
+        this.actulizado = actulizado;
+    }
+
+    public int getIdniveles() {
+        return idniveles;
+    }
+
+    public void setIdniveles(int idniveles) {
+        this.idniveles = idniveles;
     }
 
     public String getNombre() {
@@ -33,21 +33,19 @@ public class Niveles {
         this.nombre = nombre;
     }
 
-    public Date getCrear() {
-        return crear;
+    public Date getCreado() {
+        return creado;
     }
 
-    public void setCrear(Date crear) {
-        this.crear = crear;
+    public void setCreado(Date creado) {
+        this.creado = creado;
     }
 
-    public Date getActulizar() {
-        return actulizar;
+    public Date getActulizado() {
+        return actulizado;
     }
 
-    public void setActulizar(Date actulizar) {
-        this.actulizar = actulizar;
+    public void setActulizado(Date actulizado) {
+        this.actulizado = actulizado;
     }
-    
-    
 }

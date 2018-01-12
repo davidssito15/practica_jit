@@ -1,24 +1,23 @@
-
 package taller.rnegocio.entidades;
-
+import java.sql.Date;
 public class Publicaciones {
     private int idpublicaciones;
-     private Usuarios usuario;
+    private Usuarios usuarios;
     private Niveles niveles;
-  private String titulo; 
-  private String contenido;
-  private String publicado; 
-  private String vistas;
-  private String votos; 
-  private String creado;
-  private String actualizado; 
+    private String titulo; 
+    private String contenido;
+    private String publicado; 
+    private int vistas;
+    private Double votos; 
+    private Date creado;
+    private Date actualizado; 
 
     public Publicaciones() {
     }
 
-    public Publicaciones(int idpublicaciones, Usuarios usuario, Niveles niveles, String titulo, String contenido, String publicado, String vistas, String votos, String creado, String actualizado) {
+    public Publicaciones(int idpublicaciones, Usuarios usuarios, Niveles niveles, String titulo, String contenido, String publicado, int vistas, Double votos, Date creado, Date actualizado) {
         this.idpublicaciones = idpublicaciones;
-        this.usuario = usuario;
+        this.usuarios = usuarios;
         this.niveles = niveles;
         this.titulo = titulo;
         this.contenido = contenido;
@@ -37,13 +36,15 @@ public class Publicaciones {
         this.idpublicaciones = idpublicaciones;
     }
 
-    public Usuarios getUsuario() {
-        return usuario;
+
+    public Usuarios getUsuarios() {
+        return usuarios;
     }
 
-    public void setUsuario(Usuarios usuario) {
-        this.usuario = usuario;
+    public void setUsuarios(Usuarios usuarios) {
+        this.usuarios = usuarios;
     }
+
 
     public Niveles getNiveles() {
         return niveles;
@@ -53,6 +54,7 @@ public class Publicaciones {
         this.niveles = niveles;
     }
 
+
     public String getTitulo() {
         return titulo;
     }
@@ -60,6 +62,7 @@ public class Publicaciones {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
 
     public String getContenido() {
         return contenido;
@@ -69,6 +72,7 @@ public class Publicaciones {
         this.contenido = contenido;
     }
 
+
     public String getPublicado() {
         return publicado;
     }
@@ -77,39 +81,39 @@ public class Publicaciones {
         this.publicado = publicado;
     }
 
-    public String getVistas() {
+
+    public int getVistas() {
         return vistas;
     }
 
-    public void setVistas(String vistas) {
+    public void setVistas(int vistas) {
         this.vistas = vistas;
     }
 
-    public String getVotos() {
+
+    public Double getVotos() {
         return votos;
     }
 
-    public void setVotos(String votos) {
+    public void setVotos(Double votos) {
         this.votos = votos;
     }
 
-    public String getCreado() {
+
+    public Date getCreado() {
         return creado;
     }
 
-    public void setCreado(String creado) {
+    public void setCreado(Date creado) {
         this.creado = creado;
     }
 
-    public String getActualizado() {
+
+    public Date getActualizado() {
         return actualizado;
     }
 
-    public void setActualizado(String actualizado) {
+    public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
-  
-  
-
-    
 }

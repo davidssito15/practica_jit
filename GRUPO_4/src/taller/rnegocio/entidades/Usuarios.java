@@ -1,23 +1,24 @@
 package taller.rnegocio.entidades;
+import java.sql.Date;
 public class Usuarios {
     private int idusuario;
     private String nombre; 
     private String email;
     private String contraseña;
-    private Rol rol; 
-    private String creado;
-    private String actualizado;
+    private Roles roles; 
+    private Date creado;
+    private Date actualizado;
     
 
     public Usuarios() {
     }
 
-    public Usuarios(int idusuario, String nombre, String email, String contraseña, Rol rol, String creado, String actualizado) {
+    public Usuarios(int idusuario, String nombre, String email, String contraseña, Roles roles, Date creado, Date actualizado) {
         this.idusuario = idusuario;
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
-        this.rol = rol;
+        this.roles = roles;
         this.creado = creado;
         this.actualizado = actualizado;
     }
@@ -54,32 +55,27 @@ public class Usuarios {
         this.contraseña = contraseña;
     }
 
-    public Rol getRol() {
-        return rol;
+    public Roles getRoles() {
+        return roles;
     }
 
-    public void setRol(Rol rol) {
-        this.rol = rol;
+    public void setRoles(Roles roles) {
+        this.roles = roles;
     }
 
-    public String getCreado() {
+    public Date getCreado() {
         return creado;
     }
 
-    public void setCreado(String creado) {
+    public void setCreado(Date creado) {
         this.creado = creado;
     }
 
-    public String getActualizado() {
+    public Date getActualizado() {
         return actualizado;
     }
 
-    public void setActualizado(String actualizado) {
+    public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
-    
-    
-    
-  
-    
 }
