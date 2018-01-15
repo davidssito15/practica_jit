@@ -1,28 +1,29 @@
 package grupo_4.entidades;
-import java.sql.Date;
+import java.util.*;
 
 public class Niveles {
-    private int idniveles;
+    
+    
+    private long id;
     private String nombre;
     private Date creado;
-    private Date actulizado;
-
+    private Date actualizado;
     public Niveles() {
     }
 
-    public Niveles(int idniveles, String nombre, Date creado, Date actulizado) {
-        this.idniveles = idniveles;
+    public Niveles(long id, String nombre, Date creado, Date actualizado) {
+        this.id = id;
         this.nombre = nombre;
         this.creado = creado;
-        this.actulizado = actulizado;
+        this.actualizado = actualizado;
     }
 
-    public int getIdniveles() {
-        return idniveles;
+    public long getId() {
+        return id;
     }
 
-    public void setIdniveles(int idniveles) {
-        this.idniveles = idniveles;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -41,11 +42,11 @@ public class Niveles {
         this.creado = creado;
     }
 
-    public Date getActulizado() {
-        return actulizado;
+    public Date getActualizado() {
+        return actualizado;
     }
 
-    public void setActulizado(Date actulizado) {
-        this.actulizado = actulizado;
+    public void setActualizado(Date actualizado) {
+        this.actualizado = actualizado;
     }
 }
