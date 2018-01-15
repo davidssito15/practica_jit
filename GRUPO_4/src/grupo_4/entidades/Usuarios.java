@@ -1,34 +1,35 @@
 package grupo_4.entidades;
-import java.sql.Date;
+
+import java.util.*;
 public class Usuarios {
-    private int idusuario;
-    private String nombre; 
+   
+    private long id;
+    private String nombre;
     private String email;
-    private String contraseña;
-    private Roles roles; 
+    private String passoword;
+    private Roles rol;
     private Date creado;
     private Date actualizado;
-    
 
     public Usuarios() {
     }
 
-    public Usuarios(int idusuario, String nombre, String email, String contraseña, Roles roles, Date creado, Date actualizado) {
-        this.idusuario = idusuario;
+    public Usuarios(long id, String nombre, String email, String passoword, Roles rol, Date creado, Date actualizado) {
+        this.id = id;
         this.nombre = nombre;
         this.email = email;
-        this.contraseña = contraseña;
-        this.roles = roles;
+        this.passoword = passoword;
+        this.rol = rol;
         this.creado = creado;
         this.actualizado = actualizado;
     }
 
-    public int getIdusuario() {
-        return idusuario;
+    public long getId() {
+        return id;
     }
 
-    public void setIdusuario(int idusuario) {
-        this.idusuario = idusuario;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -47,20 +48,20 @@ public class Usuarios {
         this.email = email;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getPassoword() {
+        return passoword;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPassoword(String passoword) {
+        this.passoword = passoword;
     }
 
-    public Roles getRoles() {
-        return roles;
+    public Roles getRol() {
+        return rol;
     }
 
-    public void setRoles(Roles roles) {
-        this.roles = roles;
+    public void setRol(Roles rol) {
+        this.rol = rol;
     }
 
     public Date getCreado() {
@@ -78,4 +79,4 @@ public class Usuarios {
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
-}
+}   
