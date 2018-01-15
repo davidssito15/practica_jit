@@ -1,84 +1,85 @@
 package grupo_4.accesodatos;
 
 import java.sql.*;
-import java.util.List;
-
+import java.util.*;
+import java.util.Date;
 public class Conexion {
 
-    Connection con = null;
+   Scanner entrada = new Scanner(System.in);
+    String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    String url = "jdbc:sqlserver://192.168.1.117:1433;databaseName=grupo4";
+    String usuario = "grupo4";
+    String conraseña = "12345";
+    Connection conexion = null;
 
     public void conectar() {
-        try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con = DriverManager.getConnection("jdbc:sqlserver://172.30.59.220:1433;databaseName=trasporte","michu", "123");
+            try {
+            Class.forName(driver);
+            conexion = DriverManager.getConnection(url, usuario, conraseña);
+            System.out.println("Conexion Establecida!!!");
         } catch (ClassNotFoundException e) {
-            System.out.println("Error al cargar el driver: "
-                    + e.getMessage());
+            System.out.println("Error al cargar Driver: " + e.getMessage());
         } catch (SQLException e) {
-            System.out.println("Error de sql: " + e.getMessage());
+            System.out.println("Error de SQL: " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("Error desconocido al conectar: "
-                    + e.getMessage());
+            System.out.println("Error en conexion: " + e.getMessage());
         }
     }
 
-    public ResultSet ejecutaQuery(String sql, List<Parametro> lst) {
-        ResultSet rst = null;
+    public ResultSet ejecutarQuery(String comandoSQL, List<Parametro> listaParametros) {
+        ResultSet resultado = null;
         try {
-            PreparedStatement pstm = con.prepareStatement(sql);
-            if (lst != null) {
-                for (Parametro p : lst) {
-                    if (p.getValor() instanceof java.util.Date) {
-                        pstm.setObject(p.getPosicion(),
-                        new java.sql.Date(((java.util.Date) p.getValor())
-                                .getTime()));
+            PreparedStatement estado = conexion.prepareStatement(comandoSQL);
+            if (listaParametros != null) {
+                for (Parametro valorP : listaParametros) {
+
+                    if (valorP.getValor() instanceof java.util.Date) {
+                        estado.setObject(valorP.getPosicion(), new java.sql.Date(((java.util.Date) valorP.getValor()).getTime()));
                     } else {
-                        pstm.setObject(p.getPosicion(), p.getValor());
+                        estado.setObject(valorP.getPosicion(), valorP.getValor());
                     }
 
                 }
             }
-            rst = pstm.executeQuery();
+            resultado = estado.executeQuery();
         } catch (Exception e) {
-            System.out.println("Error en ejecución: "
-                    + e.getMessage());
+            System.out.println("Error en Ejecucion SQL: " + e.getMessage());
         }
-        return rst;
+        return resultado;
     }
 
-    public int ejecutaComando(String sql, List<Parametro> lst) {
-        int numFilasAfectadas = 0;
+    public int ejecutarComando(String sql, ArrayList<Parametro> ValoresParametro) {
+        int nFilasAfectadas = 0;
+        ResultSet resultado = null;
         try {
-            PreparedStatement pstm = con.prepareStatement(sql);
-            if (lst != null) {
-               for (Parametro p : lst) {
-                  if (p.getValor() instanceof java.util.Date) {
-                    pstm.setObject(p.getPosicion(),
-                    new java.sql.Date(((java.util.Date) p.getValor())
-                           .getTime()));
-                   } else {
-                       pstm.setObject(p.getPosicion(), p.getValor());
-                   }
-               }
+            PreparedStatement estado = conexion.prepareStatement(sql);
+            if (ValoresParametro != null) {
+                for (Parametro valorP : ValoresParametro) {
+                    if (valorP.getValor() instanceof java.util.Date) {
+                        estado.setObject(valorP.getPosicion(), new java.sql.Date(((java.util.Date) valorP.getValor()).getTime()));
+                    } else {
+                        estado.setObject(valorP.getPosicion(), valorP.getValor());
+                    }
+                }
             }
-            numFilasAfectadas = pstm.executeUpdate();
+            nFilasAfectadas = estado.executeUpdate();
         } catch (Exception e) {
-            System.out.println("Error en ejecución: "
-                    + e.getMessage());
+            System.out.println("Error en Ejecucion SQL: " + e.getMessage());
         }
-        return numFilasAfectadas;
+        return nFilasAfectadas;
     }
 
     public void desconectar() {
+
         try {
-            if (con != null) {
-                if (!con.isClosed()) {
-                    con.close();
+            if (conexion != null) {
+                if (!conexion.isClosed()) {
+                    conexion.close();
                 }
             }
         } catch (Exception e) {
-            System.out.println("Error desconocido al desconectar:"
-                    + e.getMessage());
+            System.out.println("Error de desconexion: " + e.getMessage());
         }
+
     }
 }
