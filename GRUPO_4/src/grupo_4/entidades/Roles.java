@@ -1,10 +1,9 @@
-
 package grupo_4.entidades;
 
-import java.sql.Date;
+import java.util.*;
 
 public class Roles {
-    private int idroles;
+    private long id;
     private String nombre;
     private Date creado; 
     private Date actualizado;
@@ -13,19 +12,19 @@ public class Roles {
     public Roles() {
     }
 
-    public Roles(int idroles, String nombre, Date creado, Date actualizado) {
-        this.idroles = idroles;
+    public Roles(long id, String nombre, Date creado, Date actualizado) {
+        this.id = id;
         this.nombre = nombre;
         this.creado = creado;
         this.actualizado = actualizado;
     }
 
-    public int getIdroles() {
-        return idroles;
+    public long getId() {
+        return id;
     }
 
-    public void setIdroles(int idroles) {
-        this.idroles = idroles;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
