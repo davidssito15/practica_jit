@@ -1,6 +1,6 @@
 package grupo_4.entidades;
 
-import java.sql.*;
+import java.util.*;
 public class Etiquetas_Publicaciones {
     private Etiquetas etiqueta;
     private Publicaciones publicacion;

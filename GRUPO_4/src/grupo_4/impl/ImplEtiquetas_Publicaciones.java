@@ -1,16 +1,16 @@
-
 package grupo_4.impl;
-
 import grupo_4.accesodatos.*;
 import grupo_4.dao.*;
 import grupo_4.entidades.*;
 import java.util.*;
 import java.sql.*;
-import java.sql.Date;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ImplEtiquetas_Publicaciones implements IEtiquetas_Publicaciones{
     
-
 @Override
     public int insertar(Etiquetas_Publicaciones etiqpublic) throws Exception {
         int numFilas = 0;
@@ -18,6 +18,7 @@ public class ImplEtiquetas_Publicaciones implements IEtiquetas_Publicaciones{
         ArrayList<Parametro> lisParametros = new ArrayList<>();
         lisParametros.add(new Parametro(1, etiqpublic.getEtiqueta().getId()));
         lisParametros.add(new Parametro(2, etiqpublic.getPublicacion().getId()));
+        
         if (etiqpublic.getCreado() instanceof java.util.Date) {
             lisParametros.add(new Parametro(3, new java.sql.Date(((java.util.Date) etiqpublic.getCreado()).getTime())));
         } else {
@@ -171,5 +172,5 @@ public class ImplEtiquetas_Publicaciones implements IEtiquetas_Publicaciones{
         }
         return etiqpublics;
     }
-
 }
+

@@ -6,8 +6,8 @@ public class Conexion {
 
     Scanner entrada = new Scanner(System.in);
     String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    String url = "jdbc:sqlserver://192.168.1.117:1433;databaseName=grupo4";
-    String usuario = "grupo4";
+    String url = "jdbc:sqlserver://192.168.137.167:1433;databaseName=grupo4";
+    String usuario = "pro4";
     String conraseña = "12345";
     Connection conexion = null;
 

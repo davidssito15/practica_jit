@@ -19,7 +19,7 @@ public class RolesTest {
 //TEST INSERTAR
 
         int filas=0;
-        Roles nuevoRol=new Roles(10, "lulu", new Date(), new Date());
+        Roles nuevoRol=new Roles(11, "lu", new Date(), new Date());
         try {
             filas=rolDao.insertar(nuevoRol);
             System.out.println("Filas Insertadas:"+filas+"\n\n");
