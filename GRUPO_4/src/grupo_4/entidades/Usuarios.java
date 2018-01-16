@@ -3,13 +3,14 @@ package grupo_4.entidades;
 import java.util.*;
 public class Usuarios {
    
-    private long id;
+     private long id;
     private String nombre;
     private String email;
     private String passoword;
     private Roles rol;
     private Date creado;
     private Date actualizado;
+
 
     public Usuarios() {
     }
@@ -79,4 +80,4 @@ public class Usuarios {
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
-}   
+}

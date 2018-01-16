@@ -1,4 +1,3 @@
-
 package grupo_4;
 import grupo_4.accesodatos.*;
 import grupo_4.dao.*;
@@ -16,16 +15,19 @@ public class NivelesTest {
      @Test
     public void testGeneral(){
         INiveles nivelDao=new ImplNiveles();
-//        //TEST INSERTAR
+        
+//TEST INSERTAR
+
         int filas=0;
-        Niveles nuevoNivel=new Niveles(222, "ANASTACIA", new Date(), new Date());
+        Niveles nuevoNivel=new Niveles(2, "JACINTA", new Date(), new Date());
         try {
             filas=nivelDao.insertar(nuevoNivel);
             System.out.println("filas Insertadas:"+filas+"\n");
         } catch (Exception e) {
         }
         assertEquals(filas>0, true);
-//        //TEST OBTENER POR CODIGO
+        
+//TEST OBTENER POR CODIGO
         
         Niveles nive=new Niveles();
         try {
@@ -33,12 +35,14 @@ public class NivelesTest {
             System.out.println(nive.getId()+"    "+nive.getNombre()+"    "+nive.getCreado()+"    "+nive.getActualizado()+"\n");
         } catch (Exception e) {
         }
-//        //TEST LISTADO
+        
+//TEST LISTADO
+
         ArrayList<Niveles> niveles=new ArrayList<>();
         try {
             niveles=nivelDao.obtener();
             for(Niveles niv:niveles){
-                System.out.println(niv.getId()+" "+niv.getNombre()+" "+niv.getCreado()+" "+niv.getActualizado());
+                System.out.println(niv.getId()+"\t\t\t"+niv.getNombre()+"\t\t\t"+niv.getCreado()+"\t\t\t"+niv.getActualizado());
             }
         } catch (Exception e) {
         }

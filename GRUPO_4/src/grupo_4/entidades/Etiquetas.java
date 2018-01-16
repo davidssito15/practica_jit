@@ -1,19 +1,20 @@
 package grupo_4.entidades;
-import java.sql.*;
+import java.util.*;
+
 public class Etiquetas {
     private long id;
     private String nombre;
     private Date creado;
     private Date actualizado;
 
-    public Etiquetas() {
-    }
-
     public Etiquetas(long id, String nombre, Date creado, Date actualizado) {
         this.id = id;
         this.nombre = nombre;
         this.creado = creado;
         this.actualizado = actualizado;
+    }
+
+    public Etiquetas() {
     }
 
     public long getId() {
@@ -46,5 +47,5 @@ public class Etiquetas {
 
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
-    }  
+    }
 }

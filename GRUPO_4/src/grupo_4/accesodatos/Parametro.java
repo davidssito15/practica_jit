@@ -28,6 +28,5 @@ public class Parametro {
 
     public void setValor(Object valor) {
         this.valor = valor;
-    }
-    
+    }    
 }

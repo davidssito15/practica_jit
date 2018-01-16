@@ -49,4 +49,5 @@ public class Niveles {
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
     }
+
 }

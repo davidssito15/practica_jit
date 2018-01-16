@@ -15,28 +15,34 @@ public class RolesTest {
     @Test
     public void testGeneral() {
         IRoles rolDao=new ImplRoles();
-       //TEST INSERTAR
+       
+//TEST INSERTAR
+
         int filas=0;
-        Roles nuevoRol=new Roles(999, "GILDA", new Date(), new Date());
+        Roles nuevoRol=new Roles(10, "lulu", new Date(), new Date());
         try {
             filas=rolDao.insertar(nuevoRol);
-            System.out.println("filas Insertadas:"+filas+"\n");
+            System.out.println("Filas Insertadas:"+filas+"\n\n");
         } catch (Exception e) {
         }
         assertEquals(filas>0, true);
-//        //TEST OBTENER POR CODIGO
+        
+//TEST OBTENER POR CODIGO
+
         Roles role=new Roles();
         try {
             role=rolDao.obtener(2313);
             System.out.println(role.getId()+"    "+role.getNombre()+"    "+role.getCreado()+"    "+role.getActualizado()+"\n");
         } catch (Exception e) {
         }
-//        //TEST LISTADO
+        
+//TEST LISTADO
+
         ArrayList<Roles> roles=new ArrayList<>();
         try {
             roles=rolDao.obtener();
             for(Roles rol:roles){
-                System.out.println(rol.getId()+" "+rol.getNombre()+" "+rol.getCreado()+" "+rol.getActualizado());
+                System.out.println(rol.getId()+"\t\t\t"+rol.getNombre()+"\t\t\t"+rol.getCreado()+"\t\t\t"+rol.getActualizado());
             }
         } catch (Exception e) {
         }

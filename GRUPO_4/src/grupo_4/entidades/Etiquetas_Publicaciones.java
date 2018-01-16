@@ -1,35 +1,36 @@
 package grupo_4.entidades;
-import java.sql.Date;
+
+import java.sql.*;
 public class Etiquetas_Publicaciones {
-    private Etiquetas etiquetas;
-    private Publicaciones publicaciones;
-    private Date creado ;
-    private Date actualizado ;
+    private Etiquetas etiqueta;
+    private Publicaciones publicacion;
+    private Date creado;
+    private Date actualizado;
 
     public Etiquetas_Publicaciones() {
     }
 
-    public Etiquetas_Publicaciones(Etiquetas etiquetas, Publicaciones publicaciones, Date creado, Date actualizado) {
-        this.etiquetas = etiquetas;
-        this.publicaciones = publicaciones;
+    public Etiquetas_Publicaciones(Etiquetas etiqueta, Publicaciones publicacion, Date creado, Date actualizado) {
+        this.etiqueta = etiqueta;
+        this.publicacion = publicacion;
         this.creado = creado;
         this.actualizado = actualizado;
     }
 
-    public Etiquetas getEtiquetas() {
-        return etiquetas;
+    public Etiquetas getEtiqueta() {
+        return etiqueta;
     }
 
-    public void setEtiquetas(Etiquetas etiquetas) {
-        this.etiquetas = etiquetas;
+    public void setEtiqueta(Etiquetas etiqueta) {
+        this.etiqueta = etiqueta;
     }
 
-    public Publicaciones getPublicaciones() {
-        return publicaciones;
+    public Publicaciones getPublicacion() {
+        return publicacion;
     }
 
-    public void setPublicaciones(Publicaciones publicaciones) {
-        this.publicaciones = publicaciones;
+    public void setPublicacion(Publicaciones publicacion) {
+        this.publicacion = publicacion;
     }
 
     public Date getCreado() {
@@ -46,5 +47,5 @@ public class Etiquetas_Publicaciones {
 
     public void setActualizado(Date actualizado) {
         this.actualizado = actualizado;
-    }   
+    }
 }

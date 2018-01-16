@@ -6,7 +6,8 @@ import java.util.*;
 import java.sql.*;
 
 public class ImplEtiquetas implements IEtiquetas{
-     @Override
+     
+    @Override
     public int insertar(Etiquetas etiqueta) throws Exception {
         int numFilas = 0;
         String sqlC = "INSERT INTO Etiqueta (id, nombre, creado, actualizado) VALUES (?,?,?,?)";

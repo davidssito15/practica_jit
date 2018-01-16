@@ -9,6 +9,7 @@ import java.sql.*;
 public class ImplUsuarios implements IUsuarios{
 
     
+    
     @Override
     public int insertar(Usuarios usuario) throws Exception {
         int numFilas = 0;

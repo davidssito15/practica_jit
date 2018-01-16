@@ -1,24 +1,25 @@
 package grupo_4.entidades;
-import java.sql.Date;
+import java.util.*;
 public class Publicaciones {
-    private int idpublicaciones;
-    private Usuarios usuarios;
-    private Niveles niveles;
-    private String titulo; 
+    
+    private long id;
+    private Usuarios usuario;
+    private Niveles nivel;
+    private String titulo;
     private String contenido;
-    private String publicado; 
+    private int publicado;
     private int vistas;
-    private Double votos; 
+    private Double votos;
     private Date creado;
-    private Date actualizado; 
+    private Date actualizado;
 
     public Publicaciones() {
     }
 
-    public Publicaciones(int idpublicaciones, Usuarios usuarios, Niveles niveles, String titulo, String contenido, String publicado, int vistas, Double votos, Date creado, Date actualizado) {
-        this.idpublicaciones = idpublicaciones;
-        this.usuarios = usuarios;
-        this.niveles = niveles;
+    public Publicaciones(long id, Usuarios usuario, Niveles nivel, String titulo, String contenido, int publicado, int vistas, Double votos, Date creado, Date actualizado) {
+        this.id = id;
+        this.usuario = usuario;
+        this.nivel = nivel;
         this.titulo = titulo;
         this.contenido = contenido;
         this.publicado = publicado;
@@ -28,32 +29,29 @@ public class Publicaciones {
         this.actualizado = actualizado;
     }
 
-    public int getIdpublicaciones() {
-        return idpublicaciones;
+    public long getId() {
+        return id;
     }
 
-    public void setIdpublicaciones(int idpublicaciones) {
-        this.idpublicaciones = idpublicaciones;
+    public void setId(long id) {
+        this.id = id;
     }
 
-
-    public Usuarios getUsuarios() {
-        return usuarios;
+    public Usuarios getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarios(Usuarios usuarios) {
-        this.usuarios = usuarios;
+    public void setUsuario(Usuarios usuario) {
+        this.usuario = usuario;
     }
 
-
-    public Niveles getNiveles() {
-        return niveles;
+    public Niveles getNivel() {
+        return nivel;
     }
 
-    public void setNiveles(Niveles niveles) {
-        this.niveles = niveles;
+    public void setNivel(Niveles nivel) {
+        this.nivel = nivel;
     }
-
 
     public String getTitulo() {
         return titulo;
@@ -63,7 +61,6 @@ public class Publicaciones {
         this.titulo = titulo;
     }
 
-
     public String getContenido() {
         return contenido;
     }
@@ -72,15 +69,13 @@ public class Publicaciones {
         this.contenido = contenido;
     }
 
-
-    public String getPublicado() {
+    public int getPublicado() {
         return publicado;
     }
 
-    public void setPublicado(String publicado) {
+    public void setPublicado(int publicado) {
         this.publicado = publicado;
     }
-
 
     public int getVistas() {
         return vistas;
@@ -90,7 +85,6 @@ public class Publicaciones {
         this.vistas = vistas;
     }
 
-
     public Double getVotos() {
         return votos;
     }
@@ -99,7 +93,6 @@ public class Publicaciones {
         this.votos = votos;
     }
 
-
     public Date getCreado() {
         return creado;
     }
@@ -107,7 +100,6 @@ public class Publicaciones {
     public void setCreado(Date creado) {
         this.creado = creado;
     }
-
 
     public Date getActualizado() {
         return actualizado;
