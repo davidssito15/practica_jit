@@ -16,6 +16,7 @@ public class ImplEtiquetas_Publicaciones implements IEtiquetas_Publicaciones{
         int numFilas = 0;
         String sqlC = "INSERT INTO EtiquetaPublicacion (idEtiqueta, idPublicacion, creado, actualizado) VALUES (?,?,?,?)";
         ArrayList<Parametro> lisParametros = new ArrayList<>();
+       
         lisParametros.add(new Parametro(1, etiqpublic.getEtiqueta().getId()));
         lisParametros.add(new Parametro(2, etiqpublic.getPublicacion().getId()));
         
