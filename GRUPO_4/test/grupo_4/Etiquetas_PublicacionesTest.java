@@ -16,13 +16,15 @@ public class Etiquetas_PublicacionesTest {
    @Test
     public void testGeneral() {
         IEtiquetas_Publicaciones etiqPublicDao = new ImplEtiquetas_Publicaciones();
+        
 //TEST INSERTAR
+
         int filas = 0;
-        Etiquetas etiq=new Etiquetas(4, "WENN", new Date(), new Date());
+        Etiquetas etiq=new Etiquetas(2, "WENN", new Date(), new Date());
         Roles nRol = new Roles(1, "SEBAS", new Date(), new Date());
-        Usuarios user = new Usuarios(3, "LIS", "CORO", "ulha", nRol, new Date(), new Date());
-        Niveles nuevoNivel=new Niveles(3, "JOSS", new Date(), new Date());
-        Publicaciones pulblicar=new Publicaciones(4, user, nuevoNivel, "123532", "ljsr", 15, 35, 7.5, new Date(), new Date());
+        Usuarios user = new Usuarios(1, "LIS", "CORO", "ulha", nRol, new Date(), new Date());
+        Niveles nuevoNivel=new Niveles(1, "JOSS", new Date(), new Date());
+        Publicaciones pulblicar=new Publicaciones(1, user, nuevoNivel, "123532", "ljsr", 15, 35, 7.5, new Date(), new Date());
         Etiquetas_Publicaciones nEtiqPublic=new Etiquetas_Publicaciones(etiq, pulblicar, new Date(), new Date());
         try {
             filas = etiqPublicDao.insertar(nEtiqPublic);
@@ -36,11 +38,11 @@ public class Etiquetas_PublicacionesTest {
 
         Etiquetas_Publicaciones etiqPubli = new Etiquetas_Publicaciones();
         try {
-            etiqPubli = etiqPublicDao.obtener(1719,2345);
+            etiqPubli = etiqPublicDao.obtener(1,1);
             System.out.println(etiqPubli.getEtiqueta().getId()+ "    " + etiqPubli.getPublicacion().getId()+ "    " + etiqPubli.getCreado()+ "    " + etiqPubli.getActualizado()+ "\n\n");
         } catch (Exception e) {
         }
-//        assertEquals(etiqPubli != null, true);
+       assertEquals(etiqPubli != null, true);
         
 //TEST LISTADO
         
@@ -48,7 +50,7 @@ public class Etiquetas_PublicacionesTest {
         try {
             etiqPublies = etiqPublicDao.obtener();
             for (Etiquetas_Publicaciones etiPubli : etiqPublies) {
-                System.out.println(etiPubli.getEtiqueta().getId()+ "\t\t\t" + etiPubli.getPublicacion().getId()+ "\t\t\t" + etiqPubli.getCreado()+ "\t\t\t" + etiqPubli.getActualizado());
+                System.out.println(etiPubli.getEtiqueta().getId()+ "\t\t\t" + etiPubli.getPublicacion().getId()+ "\t\t\t" + etiPubli.getCreado()+ "\t\t\t" + etiPubli.getActualizado());
             }
         } catch (Exception e) {
             System.out.println("error: "+e.getMessage());

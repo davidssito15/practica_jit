@@ -33,7 +33,7 @@ public class EtiquetasTest {
 
         Etiquetas etiquee=new Etiquetas();
         try {
-            etiquee=etiquetaDao.obtener(1719);
+            etiquee=etiquetaDao.obtener(2);
             System.out.println(etiquee.getId()+"    "+etiquee.getNombre()+"    "+etiquee.getCreado()+"    "+etiquee.getActualizado()+"\n");
         } catch (Exception e) {
         }

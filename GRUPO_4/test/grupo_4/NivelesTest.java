@@ -19,7 +19,7 @@ public class NivelesTest {
 //TEST INSERTAR
 
         int filas=0;
-        Niveles nuevoNivel=new Niveles(2, "JACINTA", new Date(), new Date());
+        Niveles nuevoNivel=new Niveles(5, "sebas", new Date(), new Date());
         try {
             filas=nivelDao.insertar(nuevoNivel);
             System.out.println("filas Insertadas:"+filas+"\n");
@@ -31,7 +31,7 @@ public class NivelesTest {
         
         Niveles nive=new Niveles();
         try {
-            nive=nivelDao.obtener(2313);
+            nive=nivelDao.obtener(1);
             System.out.println(nive.getId()+"    "+nive.getNombre()+"    "+nive.getCreado()+"    "+nive.getActualizado()+"\n");
         } catch (Exception e) {
         }

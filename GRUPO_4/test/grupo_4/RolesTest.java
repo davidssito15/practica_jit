@@ -31,7 +31,7 @@ public class RolesTest {
 
         Roles role=new Roles();
         try {
-            role=rolDao.obtener(2313);
+            role=rolDao.obtener(1);
             System.out.println(role.getId()+"    "+role.getNombre()+"    "+role.getCreado()+"    "+role.getActualizado()+"\n");
         } catch (Exception e) {
         }

@@ -19,10 +19,10 @@ public class PublicacionesTest {
 //TEST INSERTAR
 
         int filas = 0;
-        Roles nRol = new Roles(1, "jose", new Date(), new Date());
+        Roles nRol = new Roles(2, "jose", new Date(), new Date());
         Usuarios user = new Usuarios(1, "Ana", "luz", "ulha", nRol, new Date(), new Date());
         Niveles nuevoNivel=new Niveles(1, "luis", new Date(), new Date());
-        Publicaciones pulblicar=new Publicaciones(3, user, nuevoNivel, "HARO", "PULL", 15, 35, 7.5, new Date(), new Date());
+        Publicaciones pulblicar=new Publicaciones(3, user, nuevoNivel, "gild", "PULL", 15, 35, 7.5, new Date(), new Date());
         try {
             filas = publicDao.insertar(pulblicar);
             System.out.println("filas Insertadas:" + filas);

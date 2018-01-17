@@ -24,7 +24,7 @@ public class UsuariosTest {
 
         int filas = 0;
         Roles nRol = new Roles(1, "juan", new Date(), new Date());
-        Usuarios user = new Usuarios(6, "Gilda", "LOPEZ", "abxx.dj", nRol, new Date(), new Date());
+        Usuarios user = new Usuarios(5, "gggg", "jhgy@", "abxx.dj", nRol, new Date(), new Date());
         try {
             filas = usuarioDao.insertar(user);
             System.out.println("filas Insertadas:" + filas);
