@@ -20,7 +20,7 @@ public class Etiquetas_PublicacionesTest {
 //TEST INSERTAR
 
         int filas = 0;
-        Etiquetas etiq=new Etiquetas(2, "WENN", new Date(), new Date());
+        Etiquetas etiq=new Etiquetas(1, "WENN", new Date(), new Date());
         Roles nRol = new Roles(1, "SEBAS", new Date(), new Date());
         Usuarios user = new Usuarios(1, "LIS", "CORO", "ulha", nRol, new Date(), new Date());
         Niveles nuevoNivel=new Niveles(1, "JOSS", new Date(), new Date());
